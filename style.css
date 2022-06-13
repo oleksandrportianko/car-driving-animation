@@ -62,6 +62,101 @@ body {
    z-index: 20;
 }
 
+.third-car-block {
+   height: 250px;
+   width: 300px;
+   position: relative;
+   bottom: 45%;
+   display: flex;
+   align-items: center;
+   background-color: transparent;
+   animation: car-driving-third 11s infinite;
+}
+
+.third-car {
+   height: 250px;
+   width: 250px;
+}
+
+.car-light-third {
+   width: 40px;
+   height: 0;
+   opacity: 0.5;
+   box-shadow: 102px 0px 100px 80px white;
+   z-index: 100;
+}
+
+.fourth-car-block {
+   height: 250px;
+   width: 300px;
+   position: relative;
+   bottom: 200%;
+   display: flex;
+   align-items: center;
+   background-color: transparent;
+   animation: car-driving-fourth 6s infinite;
+}
+
+.fourth-car {
+   height: 200px;
+}
+
+.car-light-fourth {
+   width: 40px;
+   height: 0;
+   opacity: 0.5;
+   box-shadow: 102px 0px 100px 95px white;
+   z-index: 100;
+}
+
+.first-car-block {
+   height: 250px;
+   width: 250px;
+   position: relative;
+   left: 85%;
+   bottom: 20%;
+   display: flex;
+   align-items: center;
+   background-color: transparent;
+   animation: car-driving-first 6s infinite;
+}
+
+.first-car {
+   height: 200px;
+}
+
+.car-light-first {
+   width: 40px;
+   height: 0;
+   opacity: 0.5;
+   box-shadow: -332px 0px 100px 85px white;
+   z-index: 100;
+}
+
+.second-car-block {
+   height: 250px;
+   width: 250px;
+   position: relative;
+   left: 90%;
+   bottom: 200%;
+   display: flex;
+   align-items: center;
+   background-color: transparent;
+   animation: car-driving-second 4s infinite;
+}
+
+.second-car {
+   height: 200px;
+}  
+
+.car-light-second {
+   width: 160px;
+   height: 20px;
+   opacity: 0.5;
+   box-shadow: -362px 2px 100px 84px rgba(255, 255, 255, 0.7);
+   z-index: 110;
+}
+
 .current-time-text {
    font-size: 18px;
    font-weight: bold;
@@ -85,39 +180,6 @@ body {
    background-color: transparent;
    width: 100%;
    height: 150px;
-}
-
-.first-car {
-   height: 250px;
-   width: 250px;
-   position: relative;
-   left: 85%;
-   bottom: 15%;
-   animation: car-driving-first 6s infinite;
-}
-
-.second-car {
-   height: 220px;
-   width: 220px;
-   position: relative;
-   left: 85%;
-   bottom: 35%;
-   animation: car-driving-second 5s infinite;
-}
-
-.third-car {
-   height: 250px;
-   width: 250px;
-   position: relative;
-   bottom: 45%;
-   animation: car-driving-third 9s infinite;
-}
-
-.fourth-car {
-   height: 200px;
-   position: relative;
-   bottom: 40%;
-   animation: car-driving-fourth 6s infinite;
 }
 
 @keyframes car-driving-first {

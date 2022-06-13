@@ -34,7 +34,7 @@ function currentTime() {
 
   let date = new Date(); 
 //   let hh = date.getHours();
-  let hh = 05;
+  let hh = 22;
   let mm = date.getMinutes();
   let ss = date.getSeconds();
 
