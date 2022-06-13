@@ -7,6 +7,18 @@ body {
    overflow: hidden;
 }
 
+.nigth-block {
+   display: block;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #000;
+   opacity: 0.0;
+   z-index: 5;
+}
+
 .wrapper-container {
    background-image: url(./images/road.png);
    background-repeat: no-repeat;
@@ -17,6 +29,27 @@ body {
    display: flex;
    flex-direction: column;
    justify-content: end;
+}
+
+.current-time {
+   width: 150px;
+   height: 150px;
+   background-image: url(./images/sun.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   left: 87%;
+   top: 3%;
+}
+
+.current-time-text {
+   font-size: 18px;
+   font-weight: bold;
+   color: rgb(115, 37, 189);
+   font-family: 'Orbitron', sans-serif;
 }
 
 .road-block-above {
@@ -31,27 +64,36 @@ body {
 }
 
 .first-car {
-   height: 200px;
-   width: 200px;
+   height: 250px;
+   width: 250px;
    position: relative;
    left: 85%;
-   animation: car-driving-first 4s infinite;
+   bottom: 15%;
+   animation: car-driving-first 6s infinite;
 }
 
 .second-car {
-   height: 200px;
-   width: 200px;
+   height: 220px;
+   width: 220px;
    position: relative;
    left: 85%;
-   animation: car-driving-second 3s infinite;
+   bottom: 35%;
+   animation: car-driving-second 5s infinite;
 }
 
 .third-car {
-   height: 200px;
-   width: 200px;
+   height: 250px;
+   width: 250px;
    position: relative;
-   bottom: 30%;
-   animation: car-driving-third 5s infinite;
+   bottom: 45%;
+   animation: car-driving-third 9s infinite;
+}
+
+.fourth-car {
+   height: 200px;
+   position: relative;
+   bottom: 40%;
+   animation: car-driving-fourth 6s infinite;
 }
 
 @keyframes car-driving-first {
@@ -78,5 +120,14 @@ body {
    }
    100% {
       transform: translateX(2000%);
+   }
+}
+
+@keyframes car-driving-fourth {
+   0% {
+      transform: translateX(-700%);
+   }
+   100% {
+      transform: translateX(1300%);
    }
 }
