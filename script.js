@@ -27,10 +27,14 @@ const nightOpasity = {
 
 function currentTime() {
   let clockTimer = document.getElementById('clock-timer');
+  let clockTimerNight = document.getElementById('clock-timer-night');
+  let clockTimerBlockSun = document.getElementById('clock-timer-block-sun');
+  let clockTimerBlockMoon = document.getElementById('clock-timer-block-moon');
   let nightBlock = document.getElementById('night-block')
 
   let date = new Date(); 
-  let hh = date.getHours();
+//   let hh = date.getHours();
+  let hh = 05;
   let mm = date.getMinutes();
   let ss = date.getSeconds();
 
@@ -39,6 +43,19 @@ function currentTime() {
   ss = ss < 10 ? '0' + ss : ss;
 
   let time = hh + ':' + mm + ':' + ss;
+
+  console.log(hh)
+
+  if (hh > 20 || hh < 06) {
+   clockTimerBlockSun.style.animation = 'sun-hide 10s infinite';
+    setTimeout(function() {
+      clockTimerBlockSun.style.display = 'none';
+      clockTimerBlockMoon.style.display = 'flex';
+      clockTimerBlockMoon.style.animation = 'moon-out 10s infinite';
+      clockTimerBlockMoon.style.animationIterationCount = '1';
+      clockTimerNight.innerHTML = time;
+    }, 10000)
+  }
 
   clockTimer.innerHTML = time;
   nightBlock.style.opacity = nightOpasity[hh]

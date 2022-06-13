@@ -31,7 +31,7 @@ body {
    justify-content: end;
 }
 
-.current-time {
+.current-time-sun {
    width: 150px;
    height: 150px;
    background-image: url(./images/sun.png);
@@ -43,12 +43,36 @@ body {
    position: absolute;
    left: 87%;
    top: 3%;
+   z-index: 20;
+   animation-iteration-count: 1;
+}
+
+.current-time-moon {
+   width: 150px;
+   height: 150px;
+   background-image: url(./images/moon.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   left: 87%;
+   top: 3%;
+   z-index: 20;
 }
 
 .current-time-text {
    font-size: 18px;
    font-weight: bold;
    color: rgb(115, 37, 189);
+   font-family: 'Orbitron', sans-serif;
+}
+
+.current-time-moon-text {
+   font-size: 18px;
+   font-weight: bold;
+   color: black;
    font-family: 'Orbitron', sans-serif;
 }
 
@@ -129,5 +153,42 @@ body {
    }
    100% {
       transform: translateX(1300%);
+   }
+}
+
+@keyframes sun-hide {
+   0% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+   50% {
+      opacity: 0.5;
+      z-index: 1;
+   }
+   98% {
+      opacity: 0.2;
+      z-index: -10;
+   }
+   100% {
+      transform: translateY(120%);
+      opacity: 0;
+      z-index: -100;
+   }
+}
+
+@keyframes moon-out {
+   0% {
+      transform: translateY(120%);
+      opacity: 0.1;
+   }
+   50% {
+      opacity: 0.2;
+   }
+   98% {
+      opacity: 0.9;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
    }
 }
